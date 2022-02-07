@@ -1,0 +1,20 @@
+{
+  "author":"Riyaz Khan",
+  "name": "BlockAds",
+  "version": "1.0",
+  "description": "BannerAds Blocker & Wynk, Ganna Downloader Extension for Chrome",
+  "permissions": ["webRequest", "webRequestBlocking", "<all_urls>",
+                  "tabs","activeTab"],
+  "icons": {
+    "16": "logo.png"
+  },
+
+  "background": {
+    "scripts": ["adBlock.js"]
+  },
+  "content_scripts": [{
+    "matches": ["*://wynk.in/music/*","*://gaana.com/*"],
+    "js": ["content.js"]
+}],
+  "manifest_version": 2
+}
